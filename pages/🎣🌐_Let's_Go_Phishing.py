@@ -4,9 +4,7 @@ import pandas as pd
 from extract_features import ExtractFeatures
 from PIL import Image
 
-# Load the image
-image = Image.open('ineuron-logo1.png')
-st.image(image, width=150)
+
 
 import streamlit as st
 
