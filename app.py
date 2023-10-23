@@ -219,34 +219,3 @@ data = {
 df = pd.DataFrame(data)
 st.table(df)
 
-st.markdown('The first group is based on the values of the attributes on the whole URL string, while the values of the following four groups are based on the particular sub-strings, as presented in Figure 1. The last group attributes are based on the URL resolve metrics as well as on the external services such as Google search index.')
-
-image=Image.open('pic1.jpg')
-st.image(image, width=500)
-st.markdown("##### Fig. 1. Separation of the whole URL string into sub-strings.")
-st.markdown("The dataset in total features 111 attributes excluding the target phishing attribute, which denotes whether the particular instance is legitimate (value 0) or phishing (value 1). We prepared two variations of the dataset, the one where the total number of instances is 58,645 and the balance between the target classes in more or less balanced with 30,647 instances labeled as phishing websites and 27,998 instances labeled as legitimate. The second variant of the dataset is comprised of 88,647 instances with 30,647 instances labeled as phishing and 58,000 instances labeled as legitimate, the purpose of which is to mimic the real-world situation where there are more legitimate websites present. The distribution between the classes of both dataset variants is presented in Figure 2.")
-
-image=Image.open('pic2.jpg')
-st.image(image, width=500)
-st.markdown("##### Fig. 2. The distribution between classes for both dataset variations. The dataset_full denotes the larger dataset, while the dataset_small denotes the smaller dataset variation. The target class 0 denotes legitimate websites while the target class 1 denotes the phishing websites.")
-
-st.markdown("### *2. Experimental Design, Materials and Methods*")
-st.markdown("In the process of preparing the phishing websites datasets variants presented in [2], we followed common steps which were also used in the dataset preparation process of similar datasets presented by Mohammad et al. [3] and Abdelhamid et al. [4].1234567")
-st.markdown("In the manner of such preparation process, we firstly collected a list of a total of 30,647 confirmed phishing URLs from the Phishtank [5] website. On the other hand, the list of legitimate URLs was obtained from Alexa ranking website8 from which we gathered 58,000 legitimate website URLs. Additionally, we have also obtained the list of 27,998 community labeled and organized URLs [1], which are the URLs pointing to the objectively reported news and are in that manner also legitimate.")
-st.markdown("From the URL lists of phishing and legitimate websites, we prepared, as already presented, two variants of the dataset. The smaller, more balanced dataset dataset_small comprises instances of extracted features from Phishtank URLs and instances of extracted features from community labeled and organized URLs representing legitimate ones. On the other hand, the larger, more unbalanced dataset consists of all of the instances from the dataset_small and the additional instances of extracted features from Alexa top sites URL list.")
-st.markdown("The complete process of extracting the features from the list of collected website addresses was conducted automatically, using a Python script. The extracting process is outlined in Algorithm 1. Such procedure was conducted in total two times, each time given different set of website addresses as already described. The final outcome reflects in two csv files containing extracted features. The csv files are handy and easy to work with various tools and programming libraries.")
-
-
-image=Image.open('pic3.jpg')
-st.image(image, width=500)
-st.markdown("##### Algorithm 1. Feature extraction process")
-
-st.markdown("### *Declaration of Competing Interest*")
-st.markdown("The authors declare that they have no known competing financial interests or personal relationships which have, or could be perceived to have, influenced the work reported in this article.")
-
-st.markdown("### *Acknowledgments*")
-st.markdown("Authors acknowledge the financial support from the Slovenian Research Agency (Research Core Funding No. P2-0057).")
-
-st.markdown("### *Reference*")
-
-st.write("""This research is based on this paper [here](https://www.sciencedirect.com/science/article/pii/S2352340920313202#fig0001)""")
